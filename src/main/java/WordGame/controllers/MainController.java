@@ -10,7 +10,6 @@ public class MainController {
 
     @GetMapping("/")
     public String indexPage(Model model){
-        model.addAttribute("mage", "KOLDUN EBUCHI");
         return "index";
     }
 

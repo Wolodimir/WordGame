@@ -8,6 +8,7 @@
 </head>
 <body>
     <div class="container">
+        <header th:insert="fragments/header"></header>
         <div th:if="${param.error}">
             Invalid username and password.
         </div>
@@ -21,6 +22,7 @@
             <div><label> Password: <input type="password" name="password"/> </label></div>
             <div><input type="submit" value="Registration"/></div>
         </form>
+        <footer th:insert="fragments/footer"></footer>
     </div>
 </body>
 </html>
