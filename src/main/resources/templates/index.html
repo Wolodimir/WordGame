@@ -7,12 +7,17 @@
     <title>Главная страница</title>
 </head>
 <body>
-<div class="container">
-    <h1 th:text="${mage}"></h1>
-    <h1>ТАК ТАК ТАК</h1>
-    <a href="/login" class="btn btn-success">ПОДПИСАЛИСЬ НА ЭТОТ САЙТ</a>
+    <div class="container">
+        <h1 th:text="${mage}"></h1>
+        <h1>ТАК ТАК ТАК</h1>
+        <a href="@{/login}" class="btn btn-success">ПОДПИСАЛИСЬ НА ЭТОТ САЙТ</a>
 
-</div>
+        <h1 th:inline="text">Hello [[${#httpServletRequest.remoteUser}]]!</h1>
+        <form th:action="@{/logout}" method="post">
+            <input type="submit" value="Sign Out"/>
+        </form>
+        <a th:href="@{/game-main}">ССЫЛКА НА ИГРУ</a>
+    </div>
 
 </body>
 </html>
